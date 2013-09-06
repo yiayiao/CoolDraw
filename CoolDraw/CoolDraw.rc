@@ -1,0 +1,571 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+#include "verrsrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#include ""res\\CoolDraw.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\CoolDraw.ico"
+IDR_CoolDrawTYPE        ICON                    "res\\CoolDrawDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "撤消(&U)\tCtrl+Z",              ID_EDIT_UNDO
+        MENUITEM "清空(&D)\tCtrl+D",              ID_EDIT_UNDOALL
+    END
+    POPUP "线宽(&W)"
+    BEGIN
+        MENUITEM "一倍线宽",                        ID_WIDE_ONE
+        MENUITEM "二倍线宽",                        ID_WIDE_TWO
+        MENUITEM "三倍线宽",                        ID_WIDE_THREE
+    END
+    POPUP "颜色(&C)"
+    BEGIN
+        MENUITEM "红色(&R)\t  Alt+R",             ID_RED
+        MENUITEM "黄色(&Y)\tAlt+Y",               ID_YELLOW
+        MENUITEM "绿色(&G)\t Alt+G",              ID_GREEN
+        MENUITEM "橙色(&O)\t Alt+O",              ID_ORANGE
+        MENUITEM "黑色(&B)\tAlt+B",               ID_BLACK
+    END
+    POPUP "视图(&V)"
+    BEGIN
+        MENUITEM "坐标(&R)\tCtrl+R",              ID_MARK
+        MENUITEM "状态栏(&S)",                     ID_VIEW_STATUS_BAR
+        MENUITEM "拆分(&P)",                      ID_WINDOW_SPLIT
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 CoolDraw",                 ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "B",            ID_BLACK,               VIRTKEY, ALT, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_EDIT_UNDOALL,        VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "G",            ID_GREEN,               VIRTKEY, ALT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    "O",            ID_ORANGE,              VIRTKEY, ALT, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    "R",            ID_RED,                 VIRTKEY, ALT, NOINVERT
+    "Y",            ID_YELLOW,              VIRTKEY, ALT, NOINVERT
+    "R",            ID_MARK,                VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 163, 125
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 CoolDraw"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC_A,17,21,18,18
+    DEFPUSHBUTTON   "退出",IDOK,91,94,41,14,WS_GROUP
+    LTEXT           "CoolDraw\t1.1版",IDC_STATIC,42,22,88,8
+    LTEXT           "梁懿的MFC课程设计，欢迎使用",IDC_STATIC,42,34,97,8
+    LTEXT           "与交流，",IDC_STATIC,26,46,28,8
+    LTEXT           "请保留产品名称不变。",IDC_STATIC,55,46,70,8
+    LTEXT           "点击“向导”进入使用说明：",IDC_STATIC,26,71,83,8
+    DEFPUSHBUTTON   "向导",ID_GUIDE,26,94,41,14,WS_GROUP
+    LTEXT           "联系方式：1030691141@qq.com",IDC_STATIC,26,58,105,8
+END
+
+IDD_LEFTFORM DIALOGEX 0, 0, 164, 294
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "绘图",IDC_DRAWBUTTON,111,178,36,14
+    GROUPBOX        "使用系统函数",IDC_STATIC1,7,7,149,132
+    PUSHBUTTON      "绘图",IDC_DRAWBUTTONSYS,111,118,36,14
+    GROUPBOX        "自定义函数",IDC_STATIC,7,139,149,59
+    CONTROL         "a=",IDC_STATIC_A,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,19,67,13,10
+    LTEXT           "b=",IDC_STATIC_B,19,86,13,10,SS_PATHELLIPSIS
+    LTEXT           "c=",IDC_STATIC_C,19,104,13,10
+    EDITTEXT        IDC_EDITA,31,65,23,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITB,31,84,23,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITC,31,102,23,12,ES_AUTOHSCROLL
+    CONTROL         "d=",IDC_STATIC_D,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,61,67,13,10
+    CONTROL         "e=",IDC_STATIC_E,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,61,86,13,10
+    CONTROL         "f=",IDC_STATIC_F,"Static",SS_LEFTNOWORDWRAP | WS_GROUP | WS_TABSTOP,61,104,13,10
+    EDITTEXT        IDC_EDITD,74,65,23,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITE,74,84,23,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITF,74,102,23,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO1,20,33,104,66,CBS_DROPDOWN | CBS_SORT | CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_EXP,20,156,103,14,ES_AUTOHSCROLL
+    GROUPBOX        "样式",IDC_STATIC,7,205,149,82
+    PUSHBUTTON      "设置",IDC_BUTTON_SET,111,265,37,14
+    LTEXT           "线宽：",IDC_STATIC_WIDE,20,220,77,8
+    LTEXT           "颜色:",IDC_STATIC_COLOR2,19,235,23,8
+    LTEXT           "背景：",IDC_STATIC_BG,19,249,23,8
+    LTEXT           "黑色",IDC_STATIC_COLOR,57,235,46,8
+    LTEXT           "exp",IDC_STATIC_BKC,42,250,11,8,WS_BORDER
+    LTEXT           "exp",IDC_STATIC_FCO,42,236,11,8,WS_BORDER
+END
+
+IDD_DIALOG_SET DIALOGEX 0, 0, 181, 125
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,30,96,50,14
+    PUSHBUTTON      "取消",IDCANCEL,102,96,50,14
+    LTEXT           "线条宽度：",IDC_STATIC,30,22,41,8
+    LTEXT           "线条颜色：",IDC_STATIC,30,40,41,8
+    LTEXT           "背景显示：",IDC_STATIC,30,58,41,8
+    COMBOBOX        IDC_COMBO_LINEWEIGHT,72,21,79,63,CBS_DROPDOWN | CBS_SORT | CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "设置",IDC_BUTTON_COLOR,90,37,25,14
+    LTEXT           "amp",IDC_STATIC_SETC,72,40,9,8,WS_BORDER
+    LTEXT           "bk",IDC_STATIC_BKC2,72,59,9,8,WS_BORDER
+    PUSHBUTTON      "设置",IDC_BUTTON_BKC,90,55,25,14
+END
+
+IDD_DIALOG_RADIO DIALOGEX 0, 0, 181, 142
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "坐标轴"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,31,106,50,14
+    PUSHBUTTON      "取消",IDCANCEL,98,106,50,14
+    LTEXT           "坐标比例：",IDC_STATIC,31,35,41,8
+    CONTROL         "",IDC_SLIDERRADIO,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,27,63,124,15
+    EDITTEXT        IDC_EDIT_RADIO,71,32,28,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "像素每单位",IDC_STATIC,105,34,41,8
+END
+
+IDD_GUIDE1 DIALOGEX 0, 0, 249, 139
+STYLE DS_SETFONT | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "描绘系统函数"
+FONT 10, "Microsoft Sans Serif", 700, 0, 0x0
+BEGIN
+    LTEXT           "在使用系统函数下拉列表中选择系统函数",IDC_STATIC,56,22,161,8
+    LTEXT           "正弦函数:\ty = sin(a*x + b)",IDC_STATIC,56,40,160,8
+    LTEXT           "余弦函数:\ty = cos(a*x + b)",IDC_STATIC,56,58,159,8
+    LTEXT           "二元一次函数:\ty = a*x*x+b*x+c",IDC_STATIC,56,75,167,8
+    LTEXT           "在相应编辑框输入a，b，c；",IDC_STATIC,56,94,161,8
+    LTEXT           "点击绘图按钮绘图。",IDC_STATIC,56,112,122,8
+END
+
+IDD_GUIDE2 DIALOGEX 0, 0, 309, 178
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "描绘自定义函数"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "在自定义函数框中输入您的函数，",IDC_STATIC,48,21,179,8
+    LTEXT           "1.系统为您提供了sin ,cos , ^ , * ,- , + 运算 ",IDC_STATIC,76,40,186,8
+    LTEXT           "2.系统为您提供了pi, e 两个数",IDC_STATIC,75,59,131,8
+    LTEXT           "注意：",IDC_STATIC,48,40,29,8
+    LTEXT           "3.请不要输入除x外的其他变量，按照计算标准输入",IDC_STATIC,74,76,216,8
+    LTEXT           "例子：",IDC_STATIC,48,118,25,8
+    LTEXT           "sinx+cosx",IDC_STATIC,74,118,60,8
+    LTEXT           "4.字母不分大小写,空格不造成干扰",IDC_STATIC,74,94,139,8
+    LTEXT           "sin(x) - 2",IDC_STATIC,141,118,45,8
+    LTEXT           "pi + 1/x",IDC_STATIC,74,130,60,8
+    LTEXT           "(x^2)/x",IDC_STATIC,141,130,52,8
+    LTEXT           "点击绘图按钮开始绘图",IDC_STATIC,48,148,117,8
+END
+
+IDD_GUIDE3 DIALOGEX 0, 0, 309, 178
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "设置线条与背景"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "您可以在菜单栏中选择线条的宽度和颜色",IDC_STATIC,55,28,199,8
+    LTEXT           "您也可以通过快捷键设置,请参阅菜单栏",IDC_STATIC,55,52,200,8
+    LTEXT           "点击左下角设置按钮,您可以设置背景和线条样式",IDC_STATIC,55,76,240,8
+    LTEXT           "点击视图下的坐标或者快捷键Ctrl+R，您可以调整坐标刻度",IDC_STATIC,55,100,235,8
+    LTEXT           "选择的字体样式对选择后的线条有效，选择的背景立刻生效",IDC_STATIC,55,124,240,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "CoolDraw"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "CoolDraw.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "CoolDraw.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 156
+        VERTGUIDE, 26
+        VERTGUIDE, 42
+        VERTGUIDE, 91
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+        HORZGUIDE, 30
+        HORZGUIDE, 42
+        HORZGUIDE, 54
+        HORZGUIDE, 66
+        HORZGUIDE, 79
+        HORZGUIDE, 108
+    END
+
+    IDD_LEFTFORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 156
+        VERTGUIDE, 19
+        VERTGUIDE, 42
+        VERTGUIDE, 147
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 287
+        HORZGUIDE, 77
+        HORZGUIDE, 96
+        HORZGUIDE, 114
+        HORZGUIDE, 132
+        HORZGUIDE, 243
+        HORZGUIDE, 257
+        HORZGUIDE, 261
+        HORZGUIDE, 272
+    END
+
+    IDD_DIALOG_SET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 174
+        VERTGUIDE, 30
+        VERTGUIDE, 72
+        VERTGUIDE, 90
+        VERTGUIDE, 115
+        TOPMARGIN, 7
+        HORZGUIDE, 47
+        HORZGUIDE, 66
+        HORZGUIDE, 84
+        HORZGUIDE, 110
+    END
+
+    IDD_DIALOG_RADIO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 174
+        VERTGUIDE, 31
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+        HORZGUIDE, 43
+        HORZGUIDE, 78
+        HORZGUIDE, 120
+    END
+
+    IDD_GUIDE1, DIALOG
+    BEGIN
+        RIGHTMARGIN, 247
+        VERTGUIDE, 56
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 132
+        HORZGUIDE, 30
+        HORZGUIDE, 48
+        HORZGUIDE, 66
+        HORZGUIDE, 83
+        HORZGUIDE, 102
+        HORZGUIDE, 120
+    END
+
+    IDD_GUIDE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        VERTGUIDE, 48
+        VERTGUIDE, 74
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+        HORZGUIDE, 29
+        HORZGUIDE, 48
+        HORZGUIDE, 67
+        HORZGUIDE, 84
+        HORZGUIDE, 102
+        HORZGUIDE, 126
+        HORZGUIDE, 138
+        HORZGUIDE, 156
+    END
+
+    IDD_GUIDE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        VERTGUIDE, 55
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+        HORZGUIDE, 7
+        HORZGUIDE, 36
+        HORZGUIDE, 60
+        HORZGUIDE, 84
+        HORZGUIDE, 108
+        HORZGUIDE, 132
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE 初始化失败。请确保 OLE 库是正确的版本。"
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "CoolDraw\n\nCoolDraw\n\n\nCoolDraw.Document\nCoolDraw.Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "CoolDraw"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "创建新文档\n新建"
+    ID_FILE_OPEN            "打开现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "用新名称保存活动文档\n另存为"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "显示程序信息、版本号和版权信息\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "打开此文档"
+    ID_FILE_MRU_FILE2       "打开此文档"
+    ID_FILE_MRU_FILE3       "打开此文档"
+    ID_FILE_MRU_FILE4       "打开此文档"
+    ID_FILE_MRU_FILE5       "打开此文档"
+    ID_FILE_MRU_FILE6       "打开此文档"
+    ID_FILE_MRU_FILE7       "打开此文档"
+    ID_FILE_MRU_FILE8       "打开此文档"
+    ID_FILE_MRU_FILE9       "打开此文档"
+    ID_FILE_MRU_FILE10      "打开此文档"
+    ID_FILE_MRU_FILE11      "打开此文档"
+    ID_FILE_MRU_FILE12      "打开此文档"
+    ID_FILE_MRU_FILE13      "打开此文档"
+    ID_FILE_MRU_FILE14      "打开此文档"
+    ID_FILE_MRU_FILE15      "打开此文档"
+    ID_FILE_MRU_FILE16      "打开此文档"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回上一个窗格\n上一窗格"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "将活动窗口拆分为多个窗格\n拆分"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "清除所选内容\n清除"
+    ID_EDIT_CLEAR_ALL       "清除全部内容\n全部清除"
+    ID_EDIT_COPY            "复制所选内容，将其放入剪贴板\n复制"
+    ID_EDIT_CUT             "剪切所选内容，将其放入剪贴板\n剪切"
+    ID_EDIT_FIND            "查找指定的文本\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一操作\n重复"
+    ID_EDIT_REPLACE         "用其他文本替换特定的文本\n替换"
+    ID_EDIT_SELECT_ALL      "选定整个文档\n全选"
+    ID_EDIT_UNDO            "撤消上一操作\n撤消"
+    ID_EDIT_REDO            "重做上次撤消的操作\n重做"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n切换状态栏"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "更改窗口大小"
+    AFX_IDS_SCMOVE          "更改窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小成图标"
+    AFX_IDS_SCMAXIMIZE      "将窗口放大到最大尺寸"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到上一个文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动窗口并提示保存文档"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "将窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务列表"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#include "res\CoolDraw.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
